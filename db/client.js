@@ -11,6 +11,7 @@ const { Client } = require("pg");//We use this as a constructor
 //Provide client with connection via "string"
 //"string" tells it where to connect and what DB are interacting and located
 const connectionString = process.env.wizards; //Database Name HERE
+
 //https://localhost:8080/wizards
 //Create a client object to pass through code
 const client = new Client ({
