@@ -120,7 +120,7 @@ async function removeWandFromWizard(wizardId) {
     try{
         const { rows: [wand] } = await client.query(`
         DELETE FROM wands
-        WHERE "wizardId" = $1
+        WHERE "wizard_id" = $1
         RETURNING *;
       `, [wizardId]);
       return wand;

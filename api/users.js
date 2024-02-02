@@ -47,7 +47,7 @@ router.post("/login", async(req, res, next) => {
         //Create a token
     } else {
         const token = jwt.sign({id: result.id, username: result.username}, JWT_SECRET,
-            { expiresIn: '1w' }
+            { expiresIn: '8w' }
             );
             console.log(token);
             //Send back an object with the user, and a useful message and the token
